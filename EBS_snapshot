@@ -1,13 +1,16 @@
 #!/bin/bash
+
+# Update the system and install Apache web server
 yum update -y
 yum install -y httpd
-# Start and enable Apache to run on
+
+# Start and enable Apache to run on boot
 systemctl start httpd
 systemctl enable httpd
 
-# Crea an index.html file with CSS animations for background color changing
+# Create an index.html file with CSS animations for background color changing
 cat > /var/www/html/index.html <<'EOF'
-< DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -20,19 +23,19 @@ cat > /var/www/html/index.html <<'EOF'
         }
 
         body {
-            color: white; 
-            font-size: 48px; 
+            color: white;
+            font-size: 48px;
             display: flex;
-            justify-content: center; 
+            justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             animation: backgroundChange 4s infinite;
         }
     </style>
-</head> 
-</body> </html>
-    <div>This Instance Was Launched from a Custom AMI</div>
+</head>
+<body>
+    <div>This Instance Was Launched from a Custom AMI</div>
 </body>
 </html>
 EOF
