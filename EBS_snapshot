@@ -1,4 +1,4 @@
-
+#!/bin/bash
 # Start and enable Apache to run on
 systemctl start httpd
 systemctl enable httpd
