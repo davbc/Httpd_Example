@@ -9,9 +9,9 @@ systemctl enable httpd
 cat > /var/www/html/index.html <<'EOF'
 < DOCTYPE html>
 <html>
-‹head>
-    ‹meta charset="UTF-8">
-    ‹title>Custom AMI Instance</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Custom AMI Instance</title>
     <style>
         @keyframes backgroundChange {
             0% { background-color: #6495ED; }
@@ -32,7 +32,7 @@ cat > /var/www/html/index.html <<'EOF'
     </style>
 </head> 
 </body> </html>
-    ‹div>This Instance Was Launched from a Custom AMI</div>
+    <div>This Instance Was Launched from a Custom AMI</div>
 </body>
 </html>
 EOF
