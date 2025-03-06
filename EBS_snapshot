@@ -6,7 +6,7 @@ systemctl start httpd
 systemctl enable httpd
 
 # Crea an index.html file with CSS animations for background color changing
-cat > Lyar/www/html/index.html <<'EOF'
+cat > /var/www/html/index.html <<'EOF'
 < DOCTYPE html>
 <html>
 ‹head>
